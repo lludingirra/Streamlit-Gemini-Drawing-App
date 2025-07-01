@@ -112,12 +112,20 @@ def sendToAI(fingers, canvas_image):
         pil_image = Image.fromarray(rgb_canvas) # Convert NumPy array (OpenCV image) to PIL Image.
         
         try:
-            # Send the image to the Google Generative AI model.
-            # "Edit the image" is a prompt to the AI. You might need more specific prompts
-            # depending on what you want the AI to do with the drawing.
+            # --- CUSTOMIZE AI OPERATION HERE ---
+            # The prompt to the AI determines what kind of operation it will perform on your drawing.
+            # You can change "Analyze the drawing" to:
+            # - "Solve this math problem" (if you draw math equations)
+            # - "Describe the object" (if you draw an object)
+            # - "Convert this sketch into a concept"
+            # - "Identify elements in this diagram"
+            # - Or any other instruction relevant to your drawing!
+            # The AI model ("gemini-2.0-flash") can also be changed to other available models
+            # like "gemini-pro-vision" for more detailed visual understanding tasks.
+            
             response = client.models.generate_content(
                 contents=[
-                    "Edit the image", # This is the text prompt for the AI.
+                    "Analyze the drawing and provide a text response.", # Generic prompt
                     pil_image # This is the image input.
                 ],
                 model="gemini-2.0-flash" # Specify the AI model to use.
