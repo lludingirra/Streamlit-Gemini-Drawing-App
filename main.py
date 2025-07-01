@@ -23,7 +23,7 @@ with col2 :
 # IMPORTANT: Replace "AIzaSyAb-tifXtvfy_AadPt36JaWHAWyJkko23o" with your actual API key.
 # It's highly recommended not to hardcode API keys directly in public repositories.
 # Consider using Streamlit secrets (st.secrets) or environment variables for production.
-client = genai.Client(api_key="AIzaSyAb-tifXtvfy_AadPt36JaWHAWyJkko23o")
+client = genai.Client(api_key="YOUR_API_KEY_HERE")
 
 # --- Webcam Setup ---
 cap = cv2.VideoCapture(0) # Initialize video capture from the default webcam (index 0).
