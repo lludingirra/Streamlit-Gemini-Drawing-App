@@ -20,7 +20,7 @@ with col2 :
 
 # --- Google Generative AI Client Initialization ---
 # Initialize the Google Generative AI client with your API key.
-# IMPORTANT: Replace "AIzaSyAb-tifXtvfy_AadPt36JaWHAWyJkko23o" with your actual API key.
+# IMPORTANT: Replace with your actual API key.
 # It's highly recommended not to hardcode API keys directly in public repositories.
 # Consider using Streamlit secrets (st.secrets) or environment variables for production.
 client = genai.Client(api_key="YOUR_API_KEY_HERE")
